@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+        <title>Welcome to my website</title>
+    </head>
+
+    <body>
+        <div class="website">
+            <p>I didn't have time to make a proper website so here is a cat gif:</p>
+            <img id="cat" onclick="doMeow()">
+        </div>
+    </body>
+
+    <style>
+        .website {
+            text-align: center;
+            font-family: "Nunito", sans-serif;
+        }
+        p {
+            font-size: 5vh;
+            margin: 4% 4% 4% 4%; 
+            color: white;
+            font-weight: bold;
+        }
+        body {
+            background-image: url("https://www.spriters-resource.com/resources/sheet_icons/172/175637.gif");
+        }
+        #cat {
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        var caturl = "https://i.pinimg.com/originals/06/e6/a1/06e6a1d4d14e7e9756c61cdf14b998b9.gif";
+        document.getElementById("cat").src = caturl;
+
+        var meow = new Audio('audio/meow.wav');
+        function doMeow() {meow.play();}
+    </script>
+</html>
